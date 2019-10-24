@@ -164,7 +164,9 @@ public class NFCActivity extends Activity implements OnClickListener {
                 break;
             case R.id.send_wg32:
                 if (mIDString != null) {
-                    int sendSpecialWG = TPS980PosUtil.sendSpecialWG(Long.toBinaryString(Long.parseLong(mIDString)));
+
+                    String correct = correct(mIDString);
+                    int sendSpecialWG = TPS980PosUtil.sendSpecialWG(correct);
                     Toast.makeText(NFCActivity.this,
                             "send wg32 ret : " + sendSpecialWG, Toast.LENGTH_SHORT)
                             .show();
@@ -182,5 +184,28 @@ public class NFCActivity extends Activity implements OnClickListener {
                 break;
         }
     }
+
+    /**
+     * 转换韦根 32 卡号
+     *
+     * @param cardNo
+     */
+    private String correct(String cardNo) {
+        String srcData = Long.toBinaryString(Long.parseLong(cardNo, 16));
+
+        String desData = null;
+
+        if (srcData.length() < 32) {
+            StringBuffer sb = new StringBuffer();
+            int diff = 32 - srcData.length();
+            for (int i = 0; i < diff; i++) {
+                sb.append("0");
+            }
+
+            desData = sb.toString() + srcData;
+        }
+        return desData;
+    }
+
 
 }
