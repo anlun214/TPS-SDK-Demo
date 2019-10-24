@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/led_white_open"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="白灯打开" />
+
+    <Button
+        android:id="@+id/led_white_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="白灯关闭" />
+    
+    <Button
+        android:id="@+id/led_red_open"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="红灯打开" />
+
+    <Button
+        android:id="@+id/led_red_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="红灯关闭" />
+    
+    <Button
+        android:id="@+id/led_green_open"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="绿灯打开" />
+
+    <Button
+        android:id="@+id/led_green_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="绿灯关闭" />
+    
+</LinearLayout>

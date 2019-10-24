@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_lightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:hint="请输入亮度（范围 0-255）">
+
+        <requestFocus />
+    </EditText>
+
+   
+     <Button
+        android:id="@+id/btn_lightness_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0亮度" />
+      <Button
+        android:id="@+id/btn_lightness_50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="50亮度" />
+      <Button
+        android:id="@+id/btn_lightness_100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="100亮度" />
+      <Button
+        android:id="@+id/btn_lightness_150"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="150亮度" />
+      <Button
+        android:id="@+id/btn_lightness_200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="200亮度" />
+ 	<Button
+        android:id="@+id/btn_lightness_255"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="255亮度" />
+</LinearLayout>

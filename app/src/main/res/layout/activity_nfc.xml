@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/show_nfc_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_nfc_working" />
+    
+    <Button android:id="@+id/send_wg26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送韦根26位信号"/>
+    
+    <Button android:id="@+id/send_wg32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送韦根32位信号"/>
+    
+    <Button android:id="@+id/send_wg34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送韦根34位信号"/>
+
+</LinearLayout>

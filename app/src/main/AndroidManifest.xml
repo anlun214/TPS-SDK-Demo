@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kk.tps">
+    <uses-permission android:name="android.permission.NFC" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".flushled.FlushLedActivity">
+        </activity>
+
+        <activity
+            android:name=".proximitysensor.ProximitySensorActivity">
+        </activity>
+
+        <activity
+            android:name=".relay.RelayActivity">
+        </activity>
+
+        <activity
+            android:name=".rs485.Rs485Activity">
+        </activity>
+
+        <activity
+            android:name=".nfc.NFCActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".nfc.NFC_PN512_Activity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity
+            android:name=".contrl.ContrlActivity">
+        </activity>
+
+        <activity
+            android:name=".belltest.BellTestActivity">
+        </activity>
+
+        <activity
+            android:name=".colorled.ColorLedActivity">
+        </activity>
+        <activity android:name=".ledlight.LedLightActivity"></activity>
+
+        <activity android:name=".led.LightnessActivity"></activity>
+
+        <activity android:name=".camerapow.CameraPowActivity"></activity>
+
+        <activity android:name=".led.LedActivity"></activity>
+
+
+        <activity android:name=".hsjidcard.HSJ160TestActivity"></activity>
+
+        <activity android:name=".hsjidcard.HSJ260TestActivity"></activity>
+
+
+        <service android:name=".proximitysensor.service.ProximityService"></service>
+        <service android:name=".contrl.service.ContrlService"></service>
+    </application>
+
+</manifest>
