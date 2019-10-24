@@ -2,6 +2,7 @@ package com.kk.tps.nfc;
 
 import com.common.pos.api.util.posutil.TPS980PosUtil;
 import com.kk.tps.R;
+import com.kk.tps.TestT;
 import com.kk.tps.util.Utils;
 
 import android.app.Activity;
@@ -165,11 +166,18 @@ public class NFCActivity extends Activity implements OnClickListener {
             case R.id.send_wg32:
                 if (mIDString != null) {
 
-                    String correct = correct(mIDString);
+                    String correct = TestT.getStr(mIDString);
+                    if (correct != null) {
+
                     int sendSpecialWG = TPS980PosUtil.sendSpecialWG(correct);
                     Toast.makeText(NFCActivity.this,
                             "send wg32 ret : " + sendSpecialWG, Toast.LENGTH_SHORT)
                             .show();
+                    } else {
+                        Toast.makeText(NFCActivity.this,
+                                mIDString + "->" + correct + "==is null", Toast.LENGTH_SHORT)
+                                .show();
+                    }
 
                 }
                 break;
@@ -191,6 +199,7 @@ public class NFCActivity extends Activity implements OnClickListener {
      * @param cardNo
      */
     private String correct(String cardNo) {
+
         String srcData = Long.toBinaryString(Long.parseLong(cardNo, 16));
 
         String desData = null;
